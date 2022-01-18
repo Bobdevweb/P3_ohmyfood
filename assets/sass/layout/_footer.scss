@@ -1,0 +1,36 @@
+.footer {
+  background-color: $footercolor;
+  color: white;
+  padding-top: 1px;
+  padding-bottom: 1px;
+  h4 {
+    font-family: "Shrikhand", sans-serif;
+    font-weight: 100;
+    font-size: 17px;
+    letter-spacing: 1px;
+    padding-left: 30px;
+    padding-top: 10px;
+  }
+  ul {
+    padding-left: 30px;
+  }
+}
+/*.footcontainer h4 {
+  font-family: "Shrikhand", sans-serif;
+  font-weight: 100;
+  font-size: 17px;
+  letter-spacing: 1px;
+  padding-left: 30px;
+  padding-top: 10px;
+}*/
+/*.footcontainer ul {
+  padding-left: 30px;
+}*/
+.fa-utensils {
+  padding-right: 18px;
+  font-size: smaller;
+}
+.fa-hands-helping {
+  padding-right: 10px;
+  font-size: smaller;
+}

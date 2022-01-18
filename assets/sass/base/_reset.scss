@@ -1,0 +1,28 @@
+* {
+  font-family: "Roboto", "sans-serif";
+  list-style: none;
+  text-decoration: none;
+}
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+body {
+  height: 100%;
+  max-width: 1400px;
+  box-sizing: border-box;
+}
+
+.main {
+  margin: 0;
+  padding: 0;
+  box-sizing: content-box;
+}

@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
+    </style>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap");
+    </style>
+    <script
+      src="https://kit.fontawesome.com/5d864b5ef6.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>OhMyFood</title>
+    <link rel="icon" href="assets/img/ohmyfood@2x.svg" />
+    <link rel="stylesheet" href="loader.css" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+  </head>
+
+  <body>
+    <!-- <div class="loader">
+    <div class="loading">
+      <div class="loading__spinner">
+        <img id="logoloader" src="img/ohmyfood@2x.svg">
+        <p>Commandez, modifiez et réservez</p>
+      </div>
+    </div>
+  </div>-->
+    <div class="main">
+      <header class="OhMy">
+        <nav>
+          <img id="logo" src="assets/img/ohmyfood@2x.svg" alt="OhMyFood" />
+        </nav>
+      </header>
+
+      <section class="accueil">
+        <div class="reservez">
+          <header class="location">
+            <p><i class="fas fa-map-marker-alt"></i></p>
+            <input
+              class="location__input"
+              type="text"
+              placeholder="Paris, Belleville"
+            />
+          </header>
+          <div class="intro">
+            <h1>Réservez le menu qui vous convient</h1>
+            <p>
+              Découvrez des restaurants d'exception, séléctionnés par nos soins.
+            </p>
+            <a href="#restaurants" class="explorebutton">
+              <p>Explorer nos restaurants</p>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section class="fonction">
+        <div class="fonction__list">
+          <h2>Fonctionnement</h2>
+          <a class="fonction__choice" href="#restaurants">
+            <div class="choice__number">1</div>
+            <i class="fas fa-mobile-alt"></i>
+            <p class="cur">Choisissez un restaurant</p>
+          </a>
+          <a class="fonction__choice" href="#">
+            <div class="choice__number">2</div>
+            <i class="fas fa-list-ul"></i>
+            <p class="cur1">Composez votre menu</p>
+          </a>
+          <a class="fonction__choice" href="#">
+            <div class="choice__number">3</div>
+            <i class="fas fa-store"></i>
+            <p>Dégustez au restaurant</p>
+          </a>
+        </div>
+      </section>
+
+      <section class="restaurants" id="restaurants">
+        <h2>Restaurants</h2>
+        <ul>
+          <li>
+            <button class="heartbutton" type="button" aria-label="favorite">
+              <i class="far fa-heart"></i><i class="fas fa-heart"></i>
+            </button>
+            <a href="pages/menu1.html">
+              <!--LaPaletteduGout-->
+              <div class="newtag">Nouveau</div>
+              <figure>
+                <img
+                  class="imagebg"
+                  src="assets/img/palette.jpg"
+                  alt="LaPaletteduGout"
+                />
+                <figcaption>
+                  <h4>La palette du goût</h4>
+                  <p>Ménilmontant</p>
+                </figcaption>
+              </figure>
+            </a>
+          </li>
+          <li>
+            <div class="newtag">Nouveau</div>
+            <button class="heartbutton" type="button" aria-label="favorite">
+              <i class="far fa-heart"></i><i class="fas fa-heart"></i>
+            </button>
+            <a href="pages/menu2.html">
+              <!--La note enchantée-->
+              <figure>
+                <img src="assets/img/lanote.jpg" alt="La note enchantée" />
+                <figcaption>
+                  <h4>La note enchantée</h4>
+                  <p>Charonne</p>
+                </figcaption>
+              </figure>
+            </a>
+          </li>
+          <li>
+            <button class="heartbutton" type="button" aria-label="favorite">
+              <i class="far fa-heart"></i><i class="fas fa-heart"></i>
+            </button>
+            <a href="pages/menu3.html">
+              <!--A la française-->
+              <figure>
+                <img src="assets/img/française.jpg" alt="A la française" />
+                <figcaption>
+                  <h4>A la française</h4>
+                  <p>Cité Rouge</p>
+                </figcaption>
+              </figure>
+            </a>
+          </li>
+          <li>
+            <button class="heartbutton" type="button" aria-label="favorite">
+              <i class="far fa-heart"></i><i class="fas fa-heart"></i>
+            </button>
+            <a href="pages/menu4.html">
+              <!--Le délice des sens-->
+              <figure>
+                <img src="assets/img/délice.jpg" alt="Le délice des sens" />
+                <figcaption>
+                  <h4>Le délice des sens</h4>
+                  <p>Folie-Méricourt</p>
+                </figcaption>
+              </figure>
+            </a>
+          </li>
+        </ul>
+      </section>
+    </div>
+
+    <footer class="footer">
+      <div class="footcontainer">
+        <h4>OhMyFood</h4>
+        <ul>
+          <li><i class="fas fa-utensils"></i>Proposer un restaurant</li>
+          <li><i class="fas fa-hands-helping"></i>Devenir partenaire</li>
+          <li>Mentions légales</li>
+          <li><a href="mailto:ohmyfood@gmail.com"> Contact</a></li>
+        </ul>
+      </div>
+    </footer>
+  </body>
+</html>
+
+<!-- Avec font awesome pour l'empilage des deux il y a juste a rajouter fa-satck comme classe -->

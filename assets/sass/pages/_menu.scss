@@ -1,0 +1,127 @@
+@import "../base/animations";
+@import "../base/reset";
+@import "../base/typographie";
+@import "../components/button";
+@import "../layout/header", "../layout/footer";
+@import "../utils/variable";
+
+body {
+  background-color: $grey;
+}
+
+h1 {
+  font-family: "Shrikhand", "sans-serif";
+  font-size: 34px;
+  letter-spacing: 1px;
+  margin: 0px;
+  padding: 40px 0 40px 20px;
+}
+h2 {
+  padding-left: 15px;
+  padding-top: 15px;
+}
+h4,
+p {
+  margin: 0;
+}
+
+/*   header   */
+
+.OhMy a {
+  position: absolute;
+  top: 25px;
+  left: 30px;
+}
+.imagebg {
+  width: 100%;
+}
+
+/*   Menu  */
+
+.menu {
+  background-color: $grey;
+  border-radius: 50px 50px 0 0;
+  width: 100%;
+  margin-top: -60px;
+  padding-bottom: 20px;
+  overflow: overlay;
+  &_detail {
+    display: flex;
+    flex-direction: column;
+  }
+  &_detail h3 {
+    width: 55px;
+    margin-left: 20px;
+    font-size: 23px;
+    font-weight: 300;
+    border-bottom: 5px solid $tertiaire;
+  }
+  &_form {
+    padding: 0;
+    margin: 16px 0;
+  }
+  &_description {
+    display: flex;
+    flex-direction: column;
+    padding: 5px 5px 8px 5px;
+  }
+  &_choice {
+    display: flex;
+    align-items: flex-end;
+    overflow: hidden;
+    background-color: white;
+    border-radius: 15px;
+    margin: 0 15px 20px 15px;
+    padding-left: 6px;
+    padding-right: 15px;
+    box-shadow: 0px 6px 12px $lightgray;
+    animation-duration: 2s;
+    animation-name: include slide;
+  }
+  &_choice:hover {
+    transition: 500ms ease-in-out;
+    margin-right: 65px;
+    overflow: visible;
+    cursor: pointer;
+    border-radius: 15px 0 0 15px;
+  }
+  &_check {
+    background-color: $tertiaire;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 15px;
+    margin-right: -65px; /* -65px;*/
+    border-radius: 0 15px 15px 0;
+  }
+  &_entrees,
+  &_plats,
+  &_desserts {
+    margin-bottom: 25px;
+  }
+}
+.price {
+  display: flex;
+  align-items: flex-end;
+  margin-right: 20px;
+  margin-left: auto;
+  margin-bottom: 8px;
+  padding-bottom: 3px;
+  font-weight: bold;
+}
+.fa-check-circle {
+  transform: rotateX(360deg);
+  transition: transform 700ms;
+}
+.fa-heart {
+  font-size: 30px;
+  background: var(--grey);
+}
+.fa-heart:active {
+  background-color: $bgbutton;
+  color: red;
+  transform-origin: 50% top;
+  transform: scale(1.1);
+}
+
+/*    Footer          */

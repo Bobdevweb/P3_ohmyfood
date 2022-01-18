@@ -1,0 +1,12 @@
+@import "../base/typographie";
+@import "../components/button";
+@import "../utils/variable";
+@import "../utils/mixins";
+
+.OhMy {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
