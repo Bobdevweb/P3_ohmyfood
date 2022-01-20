@@ -1,14 +1,6 @@
-@import "../base/animations";
-@import "../base/reset";
-@import "../base/typographie";
-@import "../components/button";
-@import "../layout/header", "../layout/footer";
-@import "../utils/variable";
-
 body {
   background-color: $grey;
 }
-
 h1 {
   font-family: "Shrikhand", "sans-serif";
   font-size: 34px;
@@ -25,8 +17,13 @@ p {
   margin: 0;
 }
 
-/*   header   */
-
+.OhMy {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
 .OhMy a {
   position: absolute;
   top: 25px;
@@ -35,9 +32,6 @@ p {
 .imagebg {
   width: 100%;
 }
-
-/*   Menu  */
-
 .menu {
   background-color: $grey;
   border-radius: 50px 50px 0 0;
@@ -48,7 +42,62 @@ p {
   &_detail {
     display: flex;
     flex-direction: column;
+    &_detail h3 {
+      width: 55px;
+      margin-left: 20px;
+      font-size: 23px;
+      font-weight: 300;
+      border-bottom: 5px solid $tertiaire;
+    }
+    &_form {
+      padding: 0;
+      margin: 16px 0;
+      overflow: hidden;
+      animation-duration: 4s;
+      animation-name: slide;
+    }
+    &_description {
+      display: flex;
+      flex-direction: column;
+      padding: 5px 5px 8px 5px;
+    }
+    &_choice {
+      display: flex;
+      align-items: flex-end;
+      overflow: hidden;
+      background-color: white;
+      border-radius: 15px;
+      margin: 0 15px 20px 15px;
+      padding-left: 6px;
+      padding-right: 15px;
+      box-shadow: 0px 6px 12px $lightgray;
+      &_choice:hover .menu_check {
+        margin-right: -15px;
+      }
+      &_choice:hover .fa-check-circle {
+        transform: rotate(1turn);
+      }
+    }
+    &_check {
+      background-color: $tertiaire;
+      color: white;
+      font-size: 20px;
+      padding: 15px;
+      margin-right: -65px;
+      border-radius: 0 15px 15px 0;
+      transform-origin: right;
+      transition: 500ms ease-in-out;
+    }
+    &_entrees,
+    &_plats,
+    &_desserts {
+      margin-bottom: 25px;
+    }
   }
+}
+/*.menu_detail {
+  display: flex;
+  flex-direction: column;
   &_detail h3 {
     width: 55px;
     margin-left: 20px;
@@ -59,6 +108,9 @@ p {
   &_form {
     padding: 0;
     margin: 16px 0;
+    overflow: hidden;
+    animation-duration: 4s;
+    animation-name: slide;
   }
   &_description {
     display: flex;
@@ -75,30 +127,32 @@ p {
     padding-left: 6px;
     padding-right: 15px;
     box-shadow: 0px 6px 12px $lightgray;
-    animation-duration: 2s;
-    animation-name: include slide;
-  }
-  &_choice:hover {
-    transition: 500ms ease-in-out;
-    margin-right: 65px;
-    overflow: visible;
-    cursor: pointer;
-    border-radius: 15px 0 0 15px;
+    &_choice:hover .menu_check {
+      margin-right: -15px;
+    }
+    &_choice:hover .fa-check-circle {
+      transform: rotate(1turn);
+    }
   }
   &_check {
     background-color: $tertiaire;
     color: white;
     font-size: 20px;
-    font-weight: bold;
     padding: 15px;
-    margin-right: -65px; /* -65px;*/
+    margin-right: -65px;
     border-radius: 0 15px 15px 0;
+    transform-origin: right;
+    transition: 500ms ease-in-out;
   }
   &_entrees,
   &_plats,
   &_desserts {
     margin-bottom: 25px;
   }
+}*/
+.fa-check-circle {
+  transform: rotate(0turn);
+  transition: transform 500ms ease;
 }
 .price {
   display: flex;
@@ -109,19 +163,67 @@ p {
   padding-bottom: 3px;
   font-weight: bold;
 }
-.fa-check-circle {
-  transform: rotateX(360deg);
-  transition: transform 700ms;
+.heart {
+  border: none;
+  background: white;
+  position: absolute;
+  top: 390px;
+  right: 40px;
+  padding: 0;
+  cursor: pointer;
+  &_vide,
+  &_ok {
+    font-size: 30px;
+  }
+  &_vide:hover {
+    animation: hrt-vide 1s linear forwards;
+  }
+  &_vide:hover + i {
+    opacity: 1;
+    cursor: pointer;
+    transform: scale(1);
+    transition: transform 0.8s linear;
+  }
+  &_ok {
+    position: absolute;
+    font-size: 30px;
+    top: 0px;
+    right: 0px;
+    opacity: 0;
+    background: $bgbutton;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    transform-origin: center;
+    transform: scale(0);
+  }
 }
-.fa-heart {
-  font-size: 30px;
-  background: var(--grey);
+.purchasebutton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 55px;
+  width: 225px;
+  margin-top: 20px;
+  margin-bottom: 60px;
+  margin-left: auto;
+  margin-right: auto;
+  color: white;
+  font-weight: 500;
+  text-align: center;
+  border-radius: 25px;
+  background: linear-gradient(
+    to bottom right,
+    #e16fda 0%,
+    #e270da 45%,
+    #a55cdb 70%,
+    #ab65ed 100%
+  );
+  box-shadow: 3px 8px 5px $lightgray;
+  purchasebutton:hover {
+    font-weight: bold;
+    box-shadow: 1px 8px 6px $dgray;
+    transform: scale(1.05, 1.05);
+    transition: 0.2s all ease-in-out;
+  }
 }
-.fa-heart:active {
-  background-color: $bgbutton;
-  color: red;
-  transform-origin: 50% top;
-  transform: scale(1.1);
-}
-
-/*    Footer          */

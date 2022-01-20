@@ -17,20 +17,18 @@
       crossorigin="anonymous"
     ></script>
     <title>OhMyFood</title>
-    <link rel="icon" href="assets/img/ohmyfood@2x.svg" />
-    <link rel="stylesheet" href="loader.css" />
+    <link rel="stylesheet" href="./assets/css/loader.css" />
     <link rel="stylesheet" href="./assets/css/style.css" />
   </head>
 
   <body>
-    <!-- <div class="loader">
-    <div class="loading">
-      <div class="loading__spinner">
-        <img id="logoloader" src="img/ohmyfood@2x.svg">
-        <p>Commandez, modifiez et réservez</p>
+    <div class="loader">
+      <div class="loading">
+        <div class="loading_spinner">
+          <span class="loading_logo">OhMyFood</span>
+        </div>
       </div>
     </div>
-  </div>-->
     <div class="main">
       <header class="OhMy">
         <nav>
@@ -85,12 +83,9 @@
         <h2>Restaurants</h2>
         <ul>
           <li>
-            <button class="heartbutton" type="button" aria-label="favorite">
-              <i class="far fa-heart"></i><i class="fas fa-heart"></i>
-            </button>
+            <span class="newtag">Nouveau</span>
             <a href="pages/menu1.html">
               <!--LaPaletteduGout-->
-              <div class="newtag">Nouveau</div>
               <figure>
                 <img
                   class="imagebg"
@@ -101,13 +96,18 @@
                   <h4>La palette du goût</h4>
                   <p>Ménilmontant</p>
                 </figcaption>
+                <button class="heart" type="button" aria-label="favorite">
+                  <i class="far fa-heart heart_vide"></i
+                  ><i class="fas fa-heart heart_ok"></i>
+                </button>
               </figure>
             </a>
           </li>
           <li>
             <div class="newtag">Nouveau</div>
-            <button class="heartbutton" type="button" aria-label="favorite">
-              <i class="far fa-heart"></i><i class="fas fa-heart"></i>
+            <button class="heart" type="button" aria-label="favorite">
+              <i class="far fa-heart heart_vide"></i
+              ><i class="fas fa-heart heart_ok"></i>
             </button>
             <a href="pages/menu2.html">
               <!--La note enchantée-->
@@ -121,8 +121,9 @@
             </a>
           </li>
           <li>
-            <button class="heartbutton" type="button" aria-label="favorite">
-              <i class="far fa-heart"></i><i class="fas fa-heart"></i>
+            <button class="heart" type="button" aria-label="favorite">
+              <i class="far fa-heart heart_vide"></i
+              ><i class="fas fa-heart heart_ok"></i>
             </button>
             <a href="pages/menu3.html">
               <!--A la française-->
@@ -136,8 +137,9 @@
             </a>
           </li>
           <li>
-            <button class="heartbutton" type="button" aria-label="favorite">
-              <i class="far fa-heart"></i><i class="fas fa-heart"></i>
+            <button class="heart" type="button" aria-label="favorite">
+              <i class="far fa-heart heart_vide"></i
+              ><i class="fas fa-heart heart_ok"></i>
             </button>
             <a href="pages/menu4.html">
               <!--Le délice des sens-->

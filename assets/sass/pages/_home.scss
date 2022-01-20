@@ -1,8 +1,3 @@
-@import "../base/typographie";
-@import "../utils/variable";
-@import "../utils/mixins";
-@import "../components/button";
-
 h2 {
   padding-left: 30px;
   padding-top: 15px;
@@ -29,9 +24,6 @@ h2 {
     margin-left: 70px;
   }
 }
-/*.location p {
-  margin-left: 70px;
-}*/
 .intro {
   display: flex;
   flex-direction: column;
@@ -128,6 +120,7 @@ h2 {
 .restaurants {
   padding-top: 20px;
   padding-bottom: 40px;
+
   background-color: $grey;
   ul {
     display: flex;
@@ -138,13 +131,14 @@ h2 {
     margin: 30px;
   }
   li {
+    position: relative;
     margin: 10px 0;
     padding-bottom: 5px;
     border-radius: 15px;
     flex-basis: 30%;
     min-width: 30%;
     background-color: white;
-    box-shadow: 1px 2px 8px gray;
+    box-shadow: 1px 2px 8px $dgray;
   }
   li:hover {
     transform: scale(1.02, 1.02);
@@ -174,16 +168,46 @@ h2 {
 .newtag {
   position: absolute;
   font-weight: bold;
+  font-family: "Roboto", sans-serif;
   color: $newtagcolor;
   background-color: $tertiaire;
-  margin: 16px 20px 0 320px;
+  top: 20px;
+  right: 15px;
   padding: 5px 10px;
 }
-.heartbutton {
+.heart {
   border: none;
   background: white;
   position: absolute;
-  margin: 215px 20px 0 360px;
+  top: 210px;
+  right: 15px;
   padding: 0;
   cursor: pointer;
+  &_vide,
+  &_ok {
+    font-size: 30px;
+  }
+  &_vide:hover {
+    animation: hrt-vide 1s linear forwards;
+  }
+  &_vide:hover + i {
+    opacity: 1;
+    cursor: pointer;
+    transform: scale(1);
+    transition: transform 0.8s linear;
+  }
+  &_ok {
+    position: absolute;
+    font-size: 30px;
+    top: 0px;
+    right: 0px;
+    opacity: 0;
+    background: $bgbutton;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    transform-origin: center;
+    transform: scale(0);
+  }
 }
+

@@ -1,12 +1,10 @@
-@import "../utils/variable", "../utils/mixins";
-
 @mixin btnshadow {
   box-shadow: 3px 8px 5px $lightgray;
 }
 
 .heartbutton {
   border: none;
-  background: var(--grey);
+  background: $grey;
   position: absolute;
   margin: 47px 0 0 400px;
   padding: 0;

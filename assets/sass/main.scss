@@ -1,5 +1,12 @@
-@import "base/animations", "base/reset", "base/typographie";
+@import "utils/variable";
+@import "utils/mixins";
+@import "base/reset";
+@import "base/typographie";
 @import "components/button";
-@import "layout/header", "layout/forms", "layout/navigation", "layout/footer";
-@import "pages/home", "pages/menu";
-@import "utils/functions", "utils/mixins", "utils/variable";
+@import "layout/loader";
+@import "layout/header";
+@import "layout/navigation";
+@import "layout/footer";
+@import "base/animations";
+@import "pages/menu";
+@import "pages/home";
