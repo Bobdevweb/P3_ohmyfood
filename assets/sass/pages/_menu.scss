@@ -23,14 +23,17 @@ p {
   align-items: center;
   margin-top: 20px;
   margin-bottom: 10px;
-}
-.OhMy a {
-  position: absolute;
-  top: 25px;
-  left: 30px;
+  & a {
+    position: absolute;
+    top: 25px;
+    left: 30px;
+  }
 }
 .imagebg {
   width: 100%;
+}
+.accueil-restaurants {
+  background-color: $grey;
 }
 .menu {
   background-color: $grey;
@@ -39,61 +42,78 @@ p {
   margin-top: -60px;
   padding-bottom: 20px;
   overflow: overlay;
-  &_detail {
-    display: flex;
-    flex-direction: column;
-    &_detail h3 {
+}
+.menu_detail {
+  display: flex;
+  flex-direction: column;
+  & h3 {
       width: 55px;
-      margin-left: 20px;
       font-size: 23px;
       font-weight: 300;
       border-bottom: 5px solid $tertiaire;
-    }
-    &_form {
-      padding: 0;
-      margin: 16px 0;
-      overflow: hidden;
-      animation-duration: 4s;
-      animation-name: slide;
-    }
-    &_description {
-      display: flex;
-      flex-direction: column;
-      padding: 5px 5px 8px 5px;
-    }
-    &_choice {
-      display: flex;
-      align-items: flex-end;
-      overflow: hidden;
-      background-color: white;
-      border-radius: 15px;
-      margin: 0 15px 20px 15px;
-      padding-left: 6px;
-      padding-right: 15px;
-      box-shadow: 0px 6px 12px $lightgray;
-      &_choice:hover .menu_check {
-        margin-right: -15px;
-      }
-      &_choice:hover .fa-check-circle {
-        transform: rotate(1turn);
-      }
-    }
-    &_check {
-      background-color: $tertiaire;
-      color: white;
-      font-size: 20px;
-      padding: 15px;
-      margin-right: -65px;
-      border-radius: 0 15px 15px 0;
-      transform-origin: right;
-      transition: 500ms ease-in-out;
-    }
-    &_entrees,
-    &_plats,
-    &_desserts {
-      margin-bottom: 25px;
-    }
+      margin-left: 20px;
   }
+}
+
+.menu_form {
+  padding: 0;
+  margin: 16px 0;
+  overflow: hidden;
+  animation-duration: 4s;
+  animation-name: slide;
+}
+
+@keyframes slide {
+  from {
+      opacity: -1;
+      transform-origin: bottom 0%;
+      transform: scale(0);
+  }
+  to {
+      opacity: 1;
+      transform-origin: top 100%;
+      transform: scale(1);
+  }
+}
+
+.menu_description {
+  display: flex;
+  flex-direction: column;
+  padding: 5px 5px 8px 5px;
+}
+
+.menu_choice {
+  display: flex;
+  align-items: flex-end;
+  overflow: hidden;
+  background-color: white;
+  border-radius: 15px;
+  margin: 0 15px 20px 15px;
+  padding-left: 6px;
+  padding-right: 15px;
+  box-shadow: 0px 6px 12px $lightgray;
+}
+.menu_choice:hover .menu_check {
+  margin-right: -15px;
+}
+.menu_choice:hover .fa-check-circle {
+  transform: rotate(1turn);
+}
+
+.menu_check {
+  background-color: aquamarine;
+  color: white;
+  font-size: 20px;
+  padding: 15px;
+  margin-right: -65px;
+  border-radius: 0 15px 15px 0;
+  transform-origin: right;
+  transition: 500ms ease-in-out;
+}
+.menu_entrees,
+.menu_plats,
+.menu_desserts {
+    margin-bottom: 25px;
 }
 /*.menu_detail {
   display: flex;
@@ -167,7 +187,7 @@ p {
   border: none;
   background: white;
   position: absolute;
-  top: 390px;
+  top: 395px;
   right: 40px;
   padding: 0;
   cursor: pointer;
@@ -222,7 +242,7 @@ p {
   box-shadow: 3px 8px 5px $lightgray;
   purchasebutton:hover {
     font-weight: bold;
-    box-shadow: 1px 8px 6px $dgray;
+    box-shadow: 1px 8px 6px $dgray, inset 0 2px 15px white;
     transform: scale(1.05, 1.05);
     transition: 0.2s all ease-in-out;
   }

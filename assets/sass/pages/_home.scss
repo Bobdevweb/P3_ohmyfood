@@ -9,7 +9,7 @@ h2 {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 5px 0 5px 0;
+  padding: 8px 0 8px 0;
   background-color: $lightgray;
   box-shadow: inset 0px 2px $dgray;
   &__input {
@@ -34,21 +34,23 @@ h2 {
   height: 250px;
   width: 75%;
   margin: auto;
+  h2 {
+    padding: 0;
+  }
 }
 .explorebutton {
-  height: 55px;
+  height: 45px;
   width: 225px;
-  margin-top: 20px;
+  margin-top: 25px;
   color: white;
   text-align: center;
   border-radius: 25px;
   background: $bgbutton;
   box-shadow: 3px 8px 5px $lightgray;
   &:hover {
-    font-weight: bold;
-    box-shadow: 1px 8px 6px $dgray;
+    box-shadow: 1px 8px 6px $dgray, inset 0 2px 15px white;
     transform: scale(1.04, 1.04);
-    transition: 0.2s all ease-in-out;
+    transition: 0.5s all ease-in-out;
   }
   p {
     padding: 10px 0 10px 0;
@@ -59,7 +61,7 @@ h2 {
 
 .fonction {
   margin-top: 25px;
-  margin-bottom: 70px;
+  margin-bottom: 90px;
   &__list {
     display: flex;
     flex-direction: column;
@@ -120,7 +122,6 @@ h2 {
 .restaurants {
   padding-top: 20px;
   padding-bottom: 40px;
-
   background-color: $grey;
   ul {
     display: flex;
@@ -163,6 +164,11 @@ h2 {
   p {
     width: 100%;
     margin: 0px 2px 1px 5px;
+    padding: 2px 0px;
+  }
+  h2 {
+    margin-top: 15px;
+    margin-bottom: -15px;
   }
 }
 .newtag {
@@ -210,4 +216,3 @@ h2 {
     transform: scale(0);
   }
 }
-

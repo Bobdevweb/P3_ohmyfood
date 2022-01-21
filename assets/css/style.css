@@ -24,10 +24,11 @@ body {
 }
 
 .main {
-  margin: 0;
+  margin: 0 auto;
   padding: 0;
   max-width: 1400px;
   box-sizing: content-box;
+  background-color: white;
 }
 
 .heartbutton {
@@ -39,12 +40,6 @@ body {
   cursor: pointer;
 }
 
-/*.heartbutton:hover{
-  background-color: var(--bgbutton);
-  color: red;
-  transform-origin: 50% top;
-  transform: scale(1.1);
-}*/
 .purchasebutton {
   display: flex;
   justify-content: center;
@@ -64,9 +59,9 @@ body {
 }
 .purchasebutton:hover {
   font-weight: bold;
-  box-shadow: 1px 8px 6px gray;
+  box-shadow: 1px 8px 6px gray, inset 0 2px 15px white;
   transform: scale(1.04, 1.04);
-  transition: 0.2s all ease-in-out;
+  transition: 0.3s all ease-in-out;
 }
 
 .loader {
@@ -79,7 +74,7 @@ body {
   inset: 0;
   z-index: 100;
   animation: disappear 3s linear forwards;
-  animation-delay: 3s;
+  animation-delay: 2s;
 }
 
 .loading {
@@ -96,7 +91,8 @@ body {
 .loading_logo {
   font-family: "Shrikhand", "sans-serif";
   font-size: 60px;
-  text-shadow: 1px 1px 60px #99e2d0;
+  text-decoration: underline 3px #99e2d0;
+  text-shadow: 1px 1px 60px lightseagreen;
   background: linear-gradient(to bottom right, #e16fda 0%, #e270da 45%, #a55cdb 70%, #ab65ed 100%);
   -webkit-background-clip: text;
   background-clip: text;
@@ -127,7 +123,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 20px;
+  padding-top: 10px;
   margin-bottom: 10px;
 }
 
@@ -182,237 +178,6 @@ body {
     opacity: 0;
   }
 }
-body {
-  background-color: #f8f7f7;
-}
-
-h1 {
-  font-family: "Shrikhand", "sans-serif";
-  font-size: 34px;
-  letter-spacing: 1px;
-  margin: 0px;
-  padding: 40px 0 40px 20px;
-}
-
-h2 {
-  padding-left: 15px;
-  padding-top: 15px;
-}
-
-h4,
-p {
-  margin: 0;
-}
-
-.OhMy {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 20px;
-  margin-bottom: 10px;
-}
-
-.OhMy a {
-  position: absolute;
-  top: 25px;
-  left: 30px;
-}
-
-.imagebg {
-  width: 100%;
-}
-
-.menu {
-  background-color: #f8f7f7;
-  border-radius: 50px 50px 0 0;
-  width: 100%;
-  margin-top: -60px;
-  padding-bottom: 20px;
-  overflow: overlay;
-}
-.menu_detail {
-  display: flex;
-  flex-direction: column;
-}
-.menu_detail_detail h3 {
-  width: 55px;
-  margin-left: 20px;
-  font-size: 23px;
-  font-weight: 300;
-  border-bottom: 5px solid #99e2d0;
-}
-.menu_detail_form {
-  padding: 0;
-  margin: 16px 0;
-  overflow: hidden;
-  animation-duration: 4s;
-  animation-name: slide;
-}
-.menu_detail_description {
-  display: flex;
-  flex-direction: column;
-  padding: 5px 5px 8px 5px;
-}
-.menu_detail_choice {
-  display: flex;
-  align-items: flex-end;
-  overflow: hidden;
-  background-color: white;
-  border-radius: 15px;
-  margin: 0 15px 20px 15px;
-  padding-left: 6px;
-  padding-right: 15px;
-  box-shadow: 0px 6px 12px #e7e7e7;
-}
-.menu_detail_choice_choice:hover .menu_check {
-  margin-right: -15px;
-}
-.menu_detail_choice_choice:hover .fa-check-circle {
-  transform: rotate(1turn);
-}
-.menu_detail_check {
-  background-color: #99e2d0;
-  color: white;
-  font-size: 20px;
-  padding: 15px;
-  margin-right: -65px;
-  border-radius: 0 15px 15px 0;
-  transform-origin: right;
-  transition: 500ms ease-in-out;
-}
-.menu_detail_entrees, .menu_detail_plats, .menu_detail_desserts {
-  margin-bottom: 25px;
-}
-
-/*.menu_detail {
-  display: flex;
-  flex-direction: column;
-  &_detail h3 {
-    width: 55px;
-    margin-left: 20px;
-    font-size: 23px;
-    font-weight: 300;
-    border-bottom: 5px solid $tertiaire;
-  }
-  &_form {
-    padding: 0;
-    margin: 16px 0;
-    overflow: hidden;
-    animation-duration: 4s;
-    animation-name: slide;
-  }
-  &_description {
-    display: flex;
-    flex-direction: column;
-    padding: 5px 5px 8px 5px;
-  }
-  &_choice {
-    display: flex;
-    align-items: flex-end;
-    overflow: hidden;
-    background-color: white;
-    border-radius: 15px;
-    margin: 0 15px 20px 15px;
-    padding-left: 6px;
-    padding-right: 15px;
-    box-shadow: 0px 6px 12px $lightgray;
-    &_choice:hover .menu_check {
-      margin-right: -15px;
-    }
-    &_choice:hover .fa-check-circle {
-      transform: rotate(1turn);
-    }
-  }
-  &_check {
-    background-color: $tertiaire;
-    color: white;
-    font-size: 20px;
-    padding: 15px;
-    margin-right: -65px;
-    border-radius: 0 15px 15px 0;
-    transform-origin: right;
-    transition: 500ms ease-in-out;
-  }
-  &_entrees,
-  &_plats,
-  &_desserts {
-    margin-bottom: 25px;
-  }
-}*/
-.fa-check-circle {
-  transform: rotate(0turn);
-  transition: transform 500ms ease;
-}
-
-.price {
-  display: flex;
-  align-items: flex-end;
-  margin-right: 20px;
-  margin-left: auto;
-  margin-bottom: 8px;
-  padding-bottom: 3px;
-  font-weight: bold;
-}
-
-.heart {
-  border: none;
-  background: white;
-  position: absolute;
-  top: 390px;
-  right: 40px;
-  padding: 0;
-  cursor: pointer;
-}
-.heart_vide, .heart_ok {
-  font-size: 30px;
-}
-.heart_vide:hover {
-  animation: hrt-vide 1s linear forwards;
-}
-.heart_vide:hover + i {
-  opacity: 1;
-  cursor: pointer;
-  transform: scale(1);
-  transition: transform 0.8s linear;
-}
-.heart_ok {
-  position: absolute;
-  font-size: 30px;
-  top: 0px;
-  right: 0px;
-  opacity: 0;
-  background: linear-gradient(to bottom right, #e16fda 0%, #e270da 45%, #a55cdb 70%, #ab65ed 100%);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-  transform-origin: center;
-  transform: scale(0);
-}
-
-.purchasebutton {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 55px;
-  width: 225px;
-  margin-top: 20px;
-  margin-bottom: 60px;
-  margin-left: auto;
-  margin-right: auto;
-  color: white;
-  font-weight: 500;
-  text-align: center;
-  border-radius: 25px;
-  background: linear-gradient(to bottom right, #e16fda 0%, #e270da 45%, #a55cdb 70%, #ab65ed 100%);
-  box-shadow: 3px 8px 5px #e7e7e7;
-}
-.purchasebutton purchasebutton:hover {
-  font-weight: bold;
-  box-shadow: 1px 8px 6px gray;
-  transform: scale(1.05, 1.05);
-  transition: 0.2s all ease-in-out;
-}
-
 h2 {
   padding-left: 30px;
   padding-top: 15px;
@@ -426,7 +191,7 @@ h2 {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 5px 0 5px 0;
+  padding: 8px 0 8px 0;
   background-color: #e7e7e7;
   box-shadow: inset 0px 2px gray;
 }
@@ -453,11 +218,14 @@ h2 {
   width: 75%;
   margin: auto;
 }
+.intro h2 {
+  padding: 0;
+}
 
 .explorebutton {
-  height: 55px;
+  height: 45px;
   width: 225px;
-  margin-top: 20px;
+  margin-top: 25px;
   color: white;
   text-align: center;
   border-radius: 25px;
@@ -465,10 +233,9 @@ h2 {
   box-shadow: 3px 8px 5px #e7e7e7;
 }
 .explorebutton:hover {
-  font-weight: bold;
-  box-shadow: 1px 8px 6px gray;
+  box-shadow: 1px 8px 6px gray, inset 0 2px 15px white;
   transform: scale(1.04, 1.04);
-  transition: 0.2s all ease-in-out;
+  transition: 0.5s all ease-in-out;
 }
 .explorebutton p {
   padding: 10px 0 10px 0;
@@ -477,7 +244,7 @@ h2 {
 /*   Fonctionnement    */
 .fonction {
   margin-top: 25px;
-  margin-bottom: 70px;
+  margin-bottom: 90px;
 }
 .fonction__list {
   display: flex;
@@ -584,6 +351,11 @@ h2 {
 .restaurants p {
   width: 100%;
   margin: 0px 2px 1px 5px;
+  padding: 2px 0px;
+}
+.restaurants h2 {
+  margin-top: 15px;
+  margin-bottom: -15px;
 }
 
 .newtag {
@@ -630,6 +402,262 @@ h2 {
   color: transparent;
   transform-origin: center;
   transform: scale(0);
+}
+
+body {
+  background-color: #f8f7f7;
+}
+
+h1 {
+  font-family: "Shrikhand", "sans-serif";
+  font-size: 34px;
+  letter-spacing: 1px;
+  margin: 0px;
+  padding: 40px 0 40px 20px;
+}
+
+h2 {
+  padding-left: 15px;
+  padding-top: 15px;
+}
+
+h4,
+p {
+  margin: 0;
+}
+
+.OhMy {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+.OhMy a {
+  position: absolute;
+  top: 25px;
+  left: 30px;
+}
+
+.imagebg {
+  width: 100%;
+}
+
+.accueil-restaurants {
+  background-color: #f8f7f7;
+}
+
+.menu {
+  background-color: #f8f7f7;
+  border-radius: 50px 50px 0 0;
+  width: 100%;
+  margin-top: -60px;
+  padding-bottom: 20px;
+  overflow: overlay;
+}
+
+.menu_detail {
+  display: flex;
+  flex-direction: column;
+}
+.menu_detail h3 {
+  width: 55px;
+  font-size: 23px;
+  font-weight: 300;
+  border-bottom: 5px solid #99e2d0;
+  margin-left: 20px;
+}
+
+.menu_form {
+  padding: 0;
+  margin: 16px 0;
+  overflow: hidden;
+  animation-duration: 4s;
+  animation-name: slide;
+}
+
+@keyframes slide {
+  from {
+    opacity: -1;
+    transform-origin: bottom 0%;
+    transform: scale(0);
+  }
+  to {
+    opacity: 1;
+    transform-origin: top 100%;
+    transform: scale(1);
+  }
+}
+.menu_description {
+  display: flex;
+  flex-direction: column;
+  padding: 5px 5px 8px 5px;
+}
+
+.menu_choice {
+  display: flex;
+  align-items: flex-end;
+  overflow: hidden;
+  background-color: white;
+  border-radius: 15px;
+  margin: 0 15px 20px 15px;
+  padding-left: 6px;
+  padding-right: 15px;
+  box-shadow: 0px 6px 12px #e7e7e7;
+}
+
+.menu_choice:hover .menu_check {
+  margin-right: -15px;
+}
+
+.menu_choice:hover .fa-check-circle {
+  transform: rotate(1turn);
+}
+
+.menu_check {
+  background-color: aquamarine;
+  color: white;
+  font-size: 20px;
+  padding: 15px;
+  margin-right: -65px;
+  border-radius: 0 15px 15px 0;
+  transform-origin: right;
+  transition: 500ms ease-in-out;
+}
+
+.menu_entrees,
+.menu_plats,
+.menu_desserts {
+  margin-bottom: 25px;
+}
+
+/*.menu_detail {
+  display: flex;
+  flex-direction: column;
+  &_detail h3 {
+    width: 55px;
+    margin-left: 20px;
+    font-size: 23px;
+    font-weight: 300;
+    border-bottom: 5px solid $tertiaire;
+  }
+  &_form {
+    padding: 0;
+    margin: 16px 0;
+    overflow: hidden;
+    animation-duration: 4s;
+    animation-name: slide;
+  }
+  &_description {
+    display: flex;
+    flex-direction: column;
+    padding: 5px 5px 8px 5px;
+  }
+  &_choice {
+    display: flex;
+    align-items: flex-end;
+    overflow: hidden;
+    background-color: white;
+    border-radius: 15px;
+    margin: 0 15px 20px 15px;
+    padding-left: 6px;
+    padding-right: 15px;
+    box-shadow: 0px 6px 12px $lightgray;
+    &_choice:hover .menu_check {
+      margin-right: -15px;
+    }
+    &_choice:hover .fa-check-circle {
+      transform: rotate(1turn);
+    }
+  }
+  &_check {
+    background-color: $tertiaire;
+    color: white;
+    font-size: 20px;
+    padding: 15px;
+    margin-right: -65px;
+    border-radius: 0 15px 15px 0;
+    transform-origin: right;
+    transition: 500ms ease-in-out;
+  }
+  &_entrees,
+  &_plats,
+  &_desserts {
+    margin-bottom: 25px;
+  }
+}*/
+.fa-check-circle {
+  transform: rotate(0turn);
+  transition: transform 500ms ease;
+}
+
+.price {
+  display: flex;
+  align-items: flex-end;
+  margin-right: 20px;
+  margin-left: auto;
+  margin-bottom: 8px;
+  padding-bottom: 3px;
+  font-weight: bold;
+}
+
+.heart {
+  border: none;
+  background: white;
+  position: absolute;
+  top: 395px;
+  right: 40px;
+  padding: 0;
+  cursor: pointer;
+}
+.heart_vide, .heart_ok {
+  font-size: 30px;
+}
+.heart_vide:hover {
+  animation: hrt-vide 1s linear forwards;
+}
+.heart_vide:hover + i {
+  opacity: 1;
+  cursor: pointer;
+  transform: scale(1);
+  transition: transform 0.8s linear;
+}
+.heart_ok {
+  position: absolute;
+  font-size: 30px;
+  top: 0px;
+  right: 0px;
+  opacity: 0;
+  background: linear-gradient(to bottom right, #e16fda 0%, #e270da 45%, #a55cdb 70%, #ab65ed 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  transform-origin: center;
+  transform: scale(0);
+}
+
+.purchasebutton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 55px;
+  width: 225px;
+  margin-top: 20px;
+  margin-bottom: 60px;
+  margin-left: auto;
+  margin-right: auto;
+  color: white;
+  font-weight: 500;
+  text-align: center;
+  border-radius: 25px;
+  background: linear-gradient(to bottom right, #e16fda 0%, #e270da 45%, #a55cdb 70%, #ab65ed 100%);
+  box-shadow: 3px 8px 5px #e7e7e7;
+}
+.purchasebutton purchasebutton:hover {
+  font-weight: bold;
+  box-shadow: 1px 8px 6px gray, inset 0 2px 15px white;
+  transform: scale(1.05, 1.05);
+  transition: 0.2s all ease-in-out;
 }
 
 /*# sourceMappingURL=style.css.map */
