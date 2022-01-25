@@ -1,5 +1,5 @@
 body {
-  background-color: $grey;
+  /*background-color: $grey;*/
 }
 h1 {
   font-family: "Shrikhand", "sans-serif";
@@ -18,12 +18,8 @@ p {
 }
 
 .OhMy {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 20px;
-  margin-bottom: 10px;
-  & a {
+  position: relative;
+  & p {
     position: absolute;
     top: 25px;
     left: 30px;
@@ -34,8 +30,10 @@ p {
 }
 .accueil-restaurants {
   background-color: $grey;
+  padding-bottom: 1px;
 }
 .menu {
+  position: relative;
   background-color: $grey;
   border-radius: 50px 50px 0 0;
   width: 100%;
@@ -47,11 +45,11 @@ p {
   display: flex;
   flex-direction: column;
   & h3 {
-      width: 55px;
-      font-size: 23px;
-      font-weight: 300;
-      border-bottom: 5px solid $tertiaire;
-      margin-left: 20px;
+    width: 55px;
+    font-size: 23px;
+    font-weight: 300;
+    border-bottom: 5px solid $tertiaire;
+    margin-left: 20px;
   }
 }
 
@@ -65,14 +63,14 @@ p {
 
 @keyframes slide {
   from {
-      opacity: -1;
-      transform-origin: bottom 0%;
-      transform: scale(0);
+    opacity: -1;
+    transform-origin: bottom 0%;
+    transform: scale(0);
   }
   to {
-      opacity: 1;
-      transform-origin: top 100%;
-      transform: scale(1);
+    opacity: 1;
+    transform-origin: top 100%;
+    transform: scale(1);
   }
 }
 
@@ -113,63 +111,8 @@ p {
 .menu_entrees,
 .menu_plats,
 .menu_desserts {
-    margin-bottom: 25px;
+  margin-bottom: 25px;
 }
-/*.menu_detail {
-  display: flex;
-  flex-direction: column;
-  &_detail h3 {
-    width: 55px;
-    margin-left: 20px;
-    font-size: 23px;
-    font-weight: 300;
-    border-bottom: 5px solid $tertiaire;
-  }
-  &_form {
-    padding: 0;
-    margin: 16px 0;
-    overflow: hidden;
-    animation-duration: 4s;
-    animation-name: slide;
-  }
-  &_description {
-    display: flex;
-    flex-direction: column;
-    padding: 5px 5px 8px 5px;
-  }
-  &_choice {
-    display: flex;
-    align-items: flex-end;
-    overflow: hidden;
-    background-color: white;
-    border-radius: 15px;
-    margin: 0 15px 20px 15px;
-    padding-left: 6px;
-    padding-right: 15px;
-    box-shadow: 0px 6px 12px $lightgray;
-    &_choice:hover .menu_check {
-      margin-right: -15px;
-    }
-    &_choice:hover .fa-check-circle {
-      transform: rotate(1turn);
-    }
-  }
-  &_check {
-    background-color: $tertiaire;
-    color: white;
-    font-size: 20px;
-    padding: 15px;
-    margin-right: -65px;
-    border-radius: 0 15px 15px 0;
-    transform-origin: right;
-    transition: 500ms ease-in-out;
-  }
-  &_entrees,
-  &_plats,
-  &_desserts {
-    margin-bottom: 25px;
-  }
-}*/
 .fa-check-circle {
   transform: rotate(0turn);
   transition: transform 500ms ease;
@@ -184,15 +127,9 @@ p {
   font-weight: bold;
 }
 .heart {
-  border: none;
-  background: white;
-  position: absolute;
-  top: 395px;
+  top: 45px;
   right: 40px;
-  padding: 0;
-  cursor: pointer;
-  &_vide,
-  &_ok {
+  &_vide {
     font-size: 30px;
   }
   &_vide:hover {
