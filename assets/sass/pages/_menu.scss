@@ -27,6 +27,9 @@ p {
 }
 .imagebg {
   width: 100%;
+  object-position: center;
+  height: 600px;
+  object-fit: cover;
 }
 .accueil-restaurants {
   background-color: $grey;
