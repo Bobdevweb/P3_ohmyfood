@@ -27,9 +27,6 @@ p {
 }
 .imagebg {
   width: 100%;
-  object-position: center;
-  height: 600px;
-  object-fit: cover;
 }
 .accueil-restaurants {
   background-color: $grey;
@@ -185,5 +182,12 @@ p {
     box-shadow: 1px 8px 6px $dgray, inset 0 2px 15px white;
     transform: scale(1.05, 1.05);
     transition: 0.2s all ease-in-out;
+  }
+}
+@media (min-width: 1200px) {
+  .imagebg {
+    object-position: center;
+    height: 600px;
+    object-fit: cover;
   }
 }
