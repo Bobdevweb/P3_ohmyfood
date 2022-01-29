@@ -147,7 +147,6 @@ body {
     z-index: -1;
   }
 }
-/*<img class="loading_logo" src="assets/img/ohmyfood.png" />*/
 .OhMy {
   display: flex;
   justify-content: center;
@@ -519,7 +518,6 @@ p {
   width: 100%;
   margin-top: -60px;
   padding-bottom: 20px;
-  overflow: overlay;
 }
 
 .menu_detail {
@@ -641,6 +639,11 @@ p {
     object-position: center;
     height: 600px;
     object-fit: cover;
+  }
+
+  .menu h1 {
+    display: flex;
+    justify-content: center;
   }
 }
 

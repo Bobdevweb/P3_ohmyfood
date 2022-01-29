@@ -31,10 +31,10 @@
 }
 @keyframes slide {
   from {
-    bottom: 500%;
+    bottom: (500%);
   }
   to {
-    top: 0%;
+    top: (0%);
   }
 }
 @keyframes disappear {
@@ -47,4 +47,3 @@
     z-index: -1;
   }
 }
-/*<img class="loading_logo" src="assets/img/ohmyfood.png" />*/
