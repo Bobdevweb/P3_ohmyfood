@@ -170,6 +170,9 @@ h2 {
     margin-top: 15px;
     margin-bottom: -15px;
   }
+  a {
+    color: black;
+  }
 }
 .newtag {
   position: absolute;
@@ -182,8 +185,6 @@ h2 {
   padding: 5px 10px;
 }
 .heart {
-  top: 217px;
-  right: 25px;
   &_vide {
     font-size: 30px;
   }

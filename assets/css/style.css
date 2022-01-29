@@ -32,11 +32,42 @@ body {
 }
 
 .heart {
+  top: 217px;
+  right: 25px;
   border: none;
   background: none;
   position: absolute;
   padding: 0;
   cursor: pointer;
+}
+.heart.restau {
+  top: 45px;
+  right: 40px;
+}
+.heart_vide {
+  font-size: 30px;
+}
+.heart_vide:hover {
+  animation: hrt-vide 1s linear forwards;
+}
+.heart_vide:hover + i {
+  opacity: 1;
+  cursor: pointer;
+  transform: scale(1);
+  transition: transform 0.8s linear;
+}
+.heart_ok {
+  position: absolute;
+  font-size: 30px;
+  top: 0px;
+  right: 0px;
+  opacity: 0;
+  background: linear-gradient(to bottom right, #e16fda 0%, #e270da 45%, #a55cdb 70%, #ab65ed 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  transform-origin: center;
+  transform: scale(0);
 }
 
 .purchasebutton {
@@ -59,7 +90,7 @@ body {
 .purchasebutton:hover {
   font-weight: bold;
   box-shadow: 1px 8px 6px gray, inset 0 2px 15px white;
-  transform: scale(1.04, 1.04);
+  transform: scale(1.05, 1.05);
   transition: 0.3s all ease-in-out;
 }
 
@@ -141,6 +172,13 @@ body {
 }
 .footer ul {
   padding-left: 30px;
+}
+.footer a {
+  font-size: 16px;
+  color: white;
+}
+.footer a:hover {
+  text-decoration: underline;
 }
 
 .fa-utensils {
@@ -357,6 +395,9 @@ h2 {
   margin-top: 15px;
   margin-bottom: -15px;
 }
+.restaurants a {
+  color: black;
+}
 
 .newtag {
   position: absolute;
@@ -369,10 +410,6 @@ h2 {
   padding: 5px 10px;
 }
 
-.heart {
-  top: 217px;
-  right: 25px;
-}
 .heart_vide {
   font-size: 30px;
 }
@@ -439,10 +476,6 @@ h2 {
     min-width: 45%;
   }
 }
-body {
-  /*background-color: $grey;*/
-}
-
 h1 {
   font-family: "Shrikhand", "sans-serif";
   font-size: 34px;
@@ -579,36 +612,6 @@ p {
   font-weight: bold;
 }
 
-.heart {
-  top: 45px;
-  right: 40px;
-}
-.heart_vide {
-  font-size: 30px;
-}
-.heart_vide:hover {
-  animation: hrt-vide 1s linear forwards;
-}
-.heart_vide:hover + i {
-  opacity: 1;
-  cursor: pointer;
-  transform: scale(1);
-  transition: transform 0.8s linear;
-}
-.heart_ok {
-  position: absolute;
-  font-size: 30px;
-  top: 0px;
-  right: 0px;
-  opacity: 0;
-  background: linear-gradient(to bottom right, #e16fda 0%, #e270da 45%, #a55cdb 70%, #ab65ed 100%);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-  transform-origin: center;
-  transform: scale(0);
-}
-
 .purchasebutton {
   display: flex;
   justify-content: center;
@@ -631,6 +634,14 @@ p {
   box-shadow: 1px 8px 6px gray, inset 0 2px 15px white;
   transform: scale(1.05, 1.05);
   transition: 0.2s all ease-in-out;
+}
+
+@media (min-width: 1200px) {
+  .imagebg {
+    object-position: center;
+    height: 600px;
+    object-fit: cover;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
