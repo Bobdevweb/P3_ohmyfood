@@ -60,12 +60,12 @@ p {
 @keyframes slide {
   from {
     opacity: -1;
-    transform-origin: bottom (0%);
+    transform-origin: 0% bottom;
     transform: scale(0);
   }
   to {
     opacity: 1;
-    transform-origin: top (100%);
+    transform-origin: 100% top;
     transform: scale(1);
   }
 }
@@ -154,8 +154,10 @@ p {
 @media (min-width: 1200px) {
   .imagebg {
     object-position: center;
+    -webkit-object-position: center;
     height: 600px;
     object-fit: cover;
+    -webkit-object-fit: cover;
   }
   .menu {
     & h1 {
